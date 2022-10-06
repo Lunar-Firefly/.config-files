@@ -62,10 +62,8 @@ tmap <C-e> <C-\><C-n>
 "
 
 " Compile C++ file
-nmap <F3> :!g++ % -Wall -g -o %:r.out<CR>
-" Run C++ file
-nmap <F4> :!./%:r.out<CR>
+nmap <F3> :!g++ % -Wall -g -o a.out<CR>
+" Run C++ file [ only works if default out is a.out ]
+nmap <F4> <C-w>n<C-w>r:term ./a.out<CR>
 
 colorscheme jellybeans
-
-
