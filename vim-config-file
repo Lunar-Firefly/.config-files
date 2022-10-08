@@ -62,8 +62,9 @@ tmap <C-e> <C-\><C-n>
 "
 
 " Compile C++ file
-nmap <F3> :!g++ % -Wall -g -o a.out<CR>
-" Run C++ file [ only works if default out is a.out ]
-nmap <F4> <C-w>n<C-w>r:term ./a.out<CR>
+nmap <F3> :!g++ % -Wall -g -o %:r.out<CR>
+" Run file
+autocmd vimEnter *.cpp nmap <F4> <C-w>n<C-w>r:term ./#:r.out<CR>
+autocmd vimEnter *.py nmap <F4> <C-w>n<C-w>r:term python3 #<CR>
 
 colorscheme jellybeans
