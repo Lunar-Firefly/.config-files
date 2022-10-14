@@ -6,7 +6,10 @@ set softtabstop=4
 set expandtab
 set shiftwidth=4
 set autoindent
+filetype on
+filetype indent on
 set number
+set relativenumber
 set wildmode=longest,list
 set cc=140
 filetype plugin indent on
@@ -23,6 +26,9 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'bluz71/vim-moonfly-colors'
 Plug 'nanotech/jellybeans.vim'
 Plug 'ap/vim-css-color'
+Plug 'tibabit/vim-templates'
+Plug 'projekt0n/github-nvim-theme'
+Plug 'sainnhe/everforest'
 call plug#end()
 
 " Custom Keybindings
@@ -34,10 +40,10 @@ call plug#end()
 
 
 "Open NERDTree
-nmap <C-f> :NERDTree <CR>       
+nmap <C-f> :NERDTree <CR>
 
 "Change open windows
-nmap <C-left> <C-w>h 
+nmap <C-left> <C-w>h
 nmap <C-right> <C-w>l
 nmap <C-up> <C-w>k
 nmap <C-down> <C-w>j
@@ -62,9 +68,15 @@ tmap <C-e> <C-\><C-n>
 "
 
 " Compile C++ file
-nmap <F3> :!g++ % -Wall -g -o %:r.out<CR>
+nmap <F3> :!g++ % -g -o %:r.out<CR>
 " Run file
+" TODO: Detect filename in newly created terminal buffer from running buffer
 autocmd vimEnter *.cpp nmap <F4> <C-w>n<C-w>r:term ./#:r.out<CR>
 autocmd vimEnter *.py nmap <F4> <C-w>n<C-w>r:term python3 #<CR>
 
-colorscheme jellybeans
+colorscheme everforest
+
+let g:tmpl_search_paths = ['~/Templates']
+let g:tmpl_auto_initialize = 0
+let g:airline_theme = 'everforest'
+let g:airline_powerline_fonts = 1
