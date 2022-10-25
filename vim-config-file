@@ -29,6 +29,7 @@ Plug 'ap/vim-css-color'
 Plug 'tibabit/vim-templates'
 Plug 'projekt0n/github-nvim-theme'
 Plug 'sainnhe/everforest'
+Plug 'rafi/awesome-vim-colorschemes'
 call plug#end()
 
 " Custom Keybindings
@@ -40,10 +41,10 @@ call plug#end()
 
 
 "Open NERDTree
-nmap <C-f> :NERDTree <CR>
+nmap <C-f> :NERDTree <CR>       
 
 "Change open windows
-nmap <C-left> <C-w>h
+nmap <C-left> <C-w>h 
 nmap <C-right> <C-w>l
 nmap <C-up> <C-w>k
 nmap <C-down> <C-w>j
@@ -74,9 +75,15 @@ nmap <F3> :!g++ % -g -o %:r.out<CR>
 autocmd vimEnter *.cpp nmap <F4> <C-w>n<C-w>r:term ./#:r.out<CR>
 autocmd vimEnter *.py nmap <F4> <C-w>n<C-w>r:term python3 #<CR>
 
-colorscheme everforest
+" colorscheme everforest
+" colorscheme gotham256
+" colorscheme orbital
+" colorscheme meta5
+" colorscheme abstract
+" colorscheme afterglow
+colorscheme github_light
 
 let g:tmpl_search_paths = ['~/Templates']
 let g:tmpl_auto_initialize = 0
-let g:airline_theme = 'everforest'
+let g:airline_theme = 'afterglow'
 let g:airline_powerline_fonts = 1
