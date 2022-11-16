@@ -17,6 +17,7 @@ syntax on
 set mouse=a
 set cursorline
 set clipboard=unnamedplus
+set termguicolors
 
 " Plug-Ins
 call plug#begin('~/.local/share/nvim/plugged')
@@ -41,10 +42,10 @@ call plug#end()
 
 
 "Open NERDTree
-nmap <C-f> :NERDTree <CR>       
+nmap <C-f> :NERDTree <CR>
 
 "Change open windows
-nmap <C-left> <C-w>h 
+nmap <C-left> <C-w>h
 nmap <C-right> <C-w>l
 nmap <C-up> <C-w>k
 nmap <C-down> <C-w>j
@@ -79,9 +80,9 @@ autocmd vimEnter *.py nmap <F4> <C-w>n<C-w>r:term python3 #<CR>
 " colorscheme gotham256
 " colorscheme orbital
 " colorscheme meta5
-" colorscheme abstract
+colorscheme abstract
 " colorscheme afterglow
-colorscheme github_light
+" colorscheme github_light
 
 let g:tmpl_search_paths = ['~/Templates']
 let g:tmpl_auto_initialize = 0
